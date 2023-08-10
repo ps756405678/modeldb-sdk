@@ -54,3 +54,9 @@ type CollectionDescribe struct {
 	Collection ModelCollection   `json:"collection"`
 	Fields     []CollectionField `json:"fields"`
 }
+
+type CreateResp struct {
+	ErrCode    int             `json:"err_code"`
+	ErrMessage string          `json:"err_message"`
+	Result     ModelDBDescribe `json:"result"`
+}
