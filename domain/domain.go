@@ -60,3 +60,12 @@ type CreateResp struct {
 	ErrMessage string          `json:"err_message"`
 	Result     ModelDBDescribe `json:"result"`
 }
+
+type EmitEventReq struct {
+	ApplicationId string `json:"application_id"`
+	InstanceId    string `json:"instance_id"`
+	ModelDBId     string `json:"model_db_id"`
+	EventName     string `json:"event_name"`
+	Source        string `json:"source"` // 事件源，一般为触发此事件的函数名
+	Params        any    `json:"params"` // 触发事件的参数，json字符串
+}
