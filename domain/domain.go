@@ -69,3 +69,13 @@ type EmitEventReq struct {
 	Source        string `json:"source"` // 事件源，一般为触发此事件的函数名
 	Params        any    `json:"params"` // 触发事件的参数，json字符串
 }
+
+type ModelVersionDiff struct {
+	Id          string `json:"id"`
+	ModelDBId   string `json:"model_db_id"`
+	DiffType    string `json:"diff_type"`
+	Type        string `json:"type"`
+	DiffContent string `json:"diff_content"`
+	Version     int    `json:"version"`
+	Remark      string `json:"remark"`
+}
