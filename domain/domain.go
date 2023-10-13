@@ -41,8 +41,9 @@ type CollectionField struct {
 }
 
 type ModelDBDescribe struct {
-	ModelDB ModelDB          `json:"model_db"`
-	Schemas []SchemaDescribe `json:"schemas"`
+	ModelDB    ModelDB          `json:"model_db"`
+	Schemas    []SchemaDescribe `json:"schemas"`
+	ConnectStr string           `json:"connect_str"`
 }
 
 type SchemaDescribe struct {
